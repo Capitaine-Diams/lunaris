@@ -8,4 +8,5 @@ Use at your own risk. Or don't. It's probably broken anyway.
 
 # things to add in the future : 
 -php/sql login system
+
 -better visuals
