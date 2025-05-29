@@ -10,6 +10,13 @@ body {
     margin: 0;
 }
 
+canvas#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
 #content {
     position: relative;
     z-index: 1;
@@ -44,12 +51,7 @@ h1 {
     transform: scale(1.05);
 }
 
-canvas#bg-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
+
 
 #content .intro {
     max-width: 700px;
