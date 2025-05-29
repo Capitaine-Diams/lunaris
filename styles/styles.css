@@ -51,8 +51,6 @@ h1 {
     transform: scale(1.05);
 }
 
-
-
 #content .intro {
     max-width: 700px;
     margin: 0 auto 40px auto;
@@ -61,4 +59,12 @@ h1 {
     color: #ccc;
 }
 
+#content .intro:hover {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ccc;
+    transform: scale(1.05) translateY(2px)
+}
 
