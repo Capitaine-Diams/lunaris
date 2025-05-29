@@ -51,4 +51,9 @@ canvas#bg-canvas {
     z-index: 0;
 }
 
+p {
+    width: 100px;
+    
+}
+
 
