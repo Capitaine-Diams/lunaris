@@ -1,70 +1,120 @@
+/* General body styling */
 body {
-    font-family: Arial, sans-serif;
-    background: #1a1a2e;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  background: #1a1a2e;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
 }
 
+/* Canvas background */
 canvas#bg-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
-#content {
-    position: relative;
-    z-index: 1;
-    color: white;
-    text-align: center;
+/* Content wrapper */
+#content,
+.login-container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
 }
 
-h1 {
-    font-size: 3em;
-    margin-bottom: 40px;
+/* Login container */
+.login-container {
+  background: #0f1a2e;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  width: 320px;
 }
 
-.buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
+/* Headings */
+h1, .login-container h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
-.btn {
-    padding: 12px 24px;
-    font-size: 1em;
-    text-decoration: none;
-    color: #fff;
-    background: #16213e;
-    border: 2px solid #0f3460;
-    border-radius: 8px;
-    transition: background 0.3s, transform 0.2s;
+/* Form inputs */
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background: #1f2a40;
+  border: 1px solid #3c4f65;
+  color: #fff;
+  border-radius: 6px;
 }
 
-.btn:hover {
-    background: #0f3460;
-    transform: scale(1.05);
+/* Buttons */
+button, .btn, .social-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 1em;
+  text-decoration: none;
+  color: #fff;
+  background: #16213e;
+  border: 2px solid #0f3460;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
 }
 
+button:hover,
+.btn:hover,
+.social-btn:hover {
+  background: #0f3460;
+  transform: scale(1.05);
+}
+
+/* Optional container for spacing login vs social */
+hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #2e3b55;
+}
+
+/* Error and success messages */
+.error {
+  color: #ff4f4f;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.success {
+  color: #00e676;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+/* Intro section */
 #content .intro {
-    max-width: 700px;
-    margin: 0 auto 40px auto;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #ccc;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+  transition: transform 0.3s;
 }
 
 #content .intro:hover {
-    max-width: 700px;
-    margin: 0 auto 40px auto;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #ccc;
-    transform: scale(1.05) translateY(2px)
+  transform: scale(1.05) translateY(2px);
 }
 
+/* Buttons in a row (optional) */
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
