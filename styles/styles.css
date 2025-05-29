@@ -41,7 +41,7 @@ h1 {
     justify-content: center;
 
 .btn {
-    padding: 12px 24px 40px;
+    padding: 12px 24px 40px 24px;
     font-size: 1em;
     text-decoration: none;
     color: #fff;
