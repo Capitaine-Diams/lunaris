@@ -59,9 +59,6 @@ h1 {
     color: #ccc;
 }
 
-#content .intro:hover {
-    transform: scale(1.02) translateY(10px);
-}
 
 #footer-links {
     position: fixed;
