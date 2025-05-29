@@ -39,6 +39,7 @@ h1 {
     display: flex;
     gap: 20px;
     justify-content: center;
+}
 
 .btn {
     padding: 12px 24px 40px 24px;
