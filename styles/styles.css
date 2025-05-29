@@ -51,9 +51,12 @@ canvas#bg-canvas {
     z-index: 0;
 }
 
-p {
-    width: 100px;
-    
+#content .intro {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ccc;
 }
 
 
