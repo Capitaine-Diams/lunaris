@@ -33,7 +33,7 @@ h1 {
     display: flex;
     gap: 20px;
     justify-content: center;
-    padding: 12px 24px 40px 24px;
+    padding: 12px 24px 400px 24px;
 }
 
 .examples {
