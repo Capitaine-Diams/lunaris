@@ -26,14 +26,15 @@ canvas#bg-canvas {
 
 h1 {
     font-size: 3em;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
+    padding: 30px 20px;
 }
 
 .buttons {
     display: flex;
     gap: 20px;
     justify-content: center;
-    padding: 12px 24px 400px 24px;
+    padding: 12px 24px 40px 24px;
 }
 
 .examples {
