@@ -35,3 +35,10 @@ h1 {
     background: #0f3460;
     transform: scale(1.05);
 }
+
+canvas#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
