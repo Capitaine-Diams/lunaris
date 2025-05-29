@@ -18,17 +18,17 @@ window.addEventListener("resize", () => {
 });
 
 window.addEventListener("mousemove", (e) => {
-  mouse.x = e.x;
-  mouse.y = e.y;
+  const rect = canvas.getBoundingClientRect();
+  mouse.x = e.clientX - rect.left;
+  mouse.y = e.clientY - rect.top;
 });
 
 function createParticles() {
   particles = [];
-  
+
   const baseRadius = canvas.width * 0.0012;
-  
   const maxSpeed = canvas.width * 0.0015;
-  
+
   for (let i = 0; i < particleCount; i++) {
     particles.push({
       x: Math.random() * canvas.width,
@@ -66,7 +66,7 @@ function drawParticles() {
       let dist = Math.sqrt(dx * dx + dy * dy);
       if (dist < maxDist) {
         const alpha = 1 - dist / maxDist;
-        ctx.strokeStyle = `rgba(200,200,200,${alpha * 1})`;
+        ctx.strokeStyle = `rgba(200,200,200,${alpha})`;
         ctx.lineWidth = alpha * maxLineWidth;
         ctx.beginPath();
         ctx.moveTo(particles[i].x, particles[i].y);
@@ -76,7 +76,7 @@ function drawParticles() {
     }
   }
 
-  if (mouse.x !== null) {
+  if (mouse.x !== null && mouse.y !== null) {
     const mouseDistMax = canvas.width * 0.18;
     for (let p of particles) {
       let dx = p.x - mouse.x;
@@ -84,7 +84,7 @@ function drawParticles() {
       let dist = Math.sqrt(dx * dx + dy * dy);
       if (dist < mouseDistMax) {
         const alpha = 1 - dist / mouseDistMax;
-        ctx.strokeStyle = `rgba(200,200,200,${alpha * 1})`;
+        ctx.strokeStyle = `rgba(200,200,200,${alpha})`;
         ctx.lineWidth = alpha * maxLineWidth;
         ctx.beginPath();
         ctx.moveTo(p.x, p.y);
